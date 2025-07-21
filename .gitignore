@@ -6,18 +6,14 @@ deploymentTargetDropDown.xml
 render.experimental.xml
 
 # Gradle
-.gradle
+.gradle/
 /local.properties
-local.properties  # ← дубликат
 
 # macOS
 .DS_Store
 
 # Android build
-/build             # ← относится к корню
+**/build/
 /captures
 .externalNativeBuild
 .cxx
-
-# Android Studio
-build/             # ← относится к подкаталогам
