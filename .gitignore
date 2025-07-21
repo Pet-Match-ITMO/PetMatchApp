@@ -1,0 +1,23 @@
+# IntelliJ IDEA
+*.iml
+.idea/
+misc.xml
+deploymentTargetDropDown.xml
+render.experimental.xml
+
+# Gradle
+.gradle
+/local.properties
+local.properties  # ← дубликат
+
+# macOS
+.DS_Store
+
+# Android build
+/build             # ← относится к корню
+/captures
+.externalNativeBuild
+.cxx
+
+# Android Studio
+build/             # ← относится к подкаталогам
