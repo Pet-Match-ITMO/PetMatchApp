@@ -17,3 +17,7 @@ render.experimental.xml
 /captures
 .externalNativeBuild
 .cxx
+
+# Kotlin & VS Code
+.kotlin/
+.vscode/
