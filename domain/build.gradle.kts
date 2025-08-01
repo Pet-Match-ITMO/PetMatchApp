@@ -9,5 +9,5 @@ kotlin {
 }
 
 dependencies {
-
+    testImplementation(kotlin("test"))
 }
