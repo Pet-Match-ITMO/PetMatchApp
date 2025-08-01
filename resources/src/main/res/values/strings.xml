@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">PetMatchApp</string>
-</resources> 
+    
+    <!-- Onboarding strings -->
+    <string name="onboarding_step_first_title">Добро пожаловать!</string>
+    <string name="onboarding_step_first_subtitle">В приложении вы найдёте питомцев из приютов, ожидающих любящих хозяев</string>
+    
+    <string name="onboarding_step_second_title">Умный подбор</string>
+    <string name="onboarding_step_second_subtitle">Внедрили искусственный интеллект, чтобы показывать самые подходящие результаты</string>
+    
+    <string name="onboarding_step_third_title">Полезные советы</string>
+    <string name="onboarding_step_third_subtitle">Получайте рекомендации по уходу за питомцем от ветеринаров и опытных владельцев</string>
+    
+    <string name="onboarding_step_fourth_title">Помощь приютам</string>
+    <string name="onboarding_step_fourth_subtitle">Поддерживайте приюты для животных и помогайте питомцам найти новый дом</string>
+</resources>
