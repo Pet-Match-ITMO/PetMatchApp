@@ -1,5 +1,6 @@
 plugins {
     kotlin("jvm")
+    alias(libs.plugins.ktlint)
 }
 
 java {
@@ -15,10 +16,4 @@ kotlin {
 
 dependencies {
     testImplementation(kotlin("test"))
-    testImplementation("junit:junit:4.13.2")
-}
-
-tasks.test {
-    useJUnitPlatform()
-    jvmArgs = listOf("-Xmx1g")
 }

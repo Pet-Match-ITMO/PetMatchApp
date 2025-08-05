@@ -15,7 +15,7 @@ import com.kernelescape.compose.resources.R
 val PlayfairDisplayFontFamily =
     FontFamily(
         Font(R.font.playfair_display, weight = FontWeight.Normal),
-        Font(R.font.playfair_display_black, weight = FontWeight.Black), // Используем отдельный файл для Black веса
+        Font(R.font.playfair_display_black, weight = FontWeight.Black) // Используем отдельный файл для Black веса
     )
 
 /**
@@ -24,34 +24,34 @@ val PlayfairDisplayFontFamily =
  */
 val SfProTextFontFamily =
     FontFamily(
-        Font(R.font.sf_pro_text_regular, weight = FontWeight.Normal), // weight 400
+        Font(R.font.sf_pro_text_regular, weight = FontWeight.Normal) // weight 400
     )
 
 // Set of Material typography styles to start with
 val Typography =
     Typography(
         bodyLarge =
-            TextStyle(
-                fontFamily = SfProTextFontFamily,
-                fontWeight = FontWeight.Normal,
-                fontSize = 16.sp,
-                lineHeight = 24.sp,
-                letterSpacing = 0.5.sp,
-            ),
+        TextStyle(
+            fontFamily = SfProTextFontFamily,
+            fontWeight = FontWeight.Normal,
+            fontSize = 16.sp,
+            lineHeight = 24.sp,
+            letterSpacing = 0.5.sp
+        ),
         titleLarge =
-            TextStyle(
-                fontFamily = PlayfairDisplayFontFamily,
-                fontWeight = FontWeight.Black,
-                fontSize = 27.sp,
-                lineHeight = 32.sp,
-                letterSpacing = 0.sp,
-            ),
+        TextStyle(
+            fontFamily = PlayfairDisplayFontFamily,
+            fontWeight = FontWeight.Black,
+            fontSize = 27.sp,
+            lineHeight = 32.sp,
+            letterSpacing = 0.sp
+        ),
         titleMedium =
-            TextStyle(
-                fontFamily = SfProTextFontFamily,
-                fontWeight = FontWeight.Normal,
-                fontSize = 15.sp,
-                lineHeight = 20.sp,
-                letterSpacing = 0.sp,
-            ),
+        TextStyle(
+            fontFamily = SfProTextFontFamily,
+            fontWeight = FontWeight.Normal,
+            fontSize = 15.sp,
+            lineHeight = 20.sp,
+            letterSpacing = 0.sp
+        )
     )

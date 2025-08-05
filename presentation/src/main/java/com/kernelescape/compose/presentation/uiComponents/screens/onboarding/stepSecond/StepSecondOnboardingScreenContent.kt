@@ -16,6 +16,6 @@ fun StepSecondOnboardingScreenContent(modifier: Modifier = Modifier) {
         illustrationRes = R.drawable.onboarding_second_step_illustration,
         title = stringResource(id = R.string.onboarding_step_second_title),
         subtitle = stringResource(id = R.string.onboarding_step_second_subtitle),
-        modifier = modifier,
+        modifier = modifier
     )
 }

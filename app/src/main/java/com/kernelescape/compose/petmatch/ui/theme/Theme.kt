@@ -21,7 +21,7 @@ private val DarkColorScheme =
         onSecondary = OnSecondaryDark,
         onBackground = OnBackgroundDark,
         onSurface = OnSurfaceDark,
-        error = ErrorColor,
+        error = ErrorColor
     )
 
 private val LightColorScheme =
@@ -35,7 +35,7 @@ private val LightColorScheme =
         onSecondary = OnSecondaryLight,
         onBackground = OnBackgroundLight,
         onSurface = OnSurfaceLight,
-        error = ErrorColor,
+        error = ErrorColor
     )
 
 @Composable
@@ -44,7 +44,7 @@ fun PetMatchAppTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     // Dynamic color is disabled to use our custom colors
     dynamicColor: Boolean = false,
-    content: @Composable () -> Unit,
+    content: @Composable () -> Unit
 ) {
     val colorScheme =
         when {
@@ -60,6 +60,6 @@ fun PetMatchAppTheme(
     MaterialTheme(
         colorScheme = colorScheme,
         typography = Typography,
-        content = content,
+        content = content
     )
 }

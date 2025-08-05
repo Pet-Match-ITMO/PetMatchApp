@@ -24,7 +24,7 @@ import kotlinx.coroutines.launch
 @Composable
 fun OnboardingPagerScreen(
     onFinishOnboarding: () -> Unit,
-    onCloseClick: () -> Unit,
+    onCloseClick: () -> Unit
 ) {
     val pagerState = rememberPagerState(pageCount = { 4 })
     val coroutineScope = rememberCoroutineScope()
@@ -44,10 +44,10 @@ fun OnboardingPagerScreen(
                     pagerState.animateScrollToPage(
                         page = pagerState.currentPage + 1,
                         animationSpec =
-                            androidx.compose.animation.core.tween(
-                                durationMillis = 500,
-                                easing = androidx.compose.animation.core.FastOutSlowInEasing,
-                            ),
+                        androidx.compose.animation.core.tween(
+                            durationMillis = 500,
+                            easing = androidx.compose.animation.core.FastOutSlowInEasing
+                        )
                     )
                 }
             }
@@ -60,29 +60,29 @@ fun OnboardingPagerScreen(
         currentStep = pagerState.currentPage + 1,
         buttonText = buttonText,
         onContinueClick = onContinueClick,
-        onCloseClick = onCloseClick,
+        onCloseClick = onCloseClick
     ) {
-            HorizontalPager(
+        HorizontalPager(
             state = pagerState,
             modifier = Modifier.fillMaxSize(),
-            userScrollEnabled = true,
+            userScrollEnabled = true
         ) { page ->
             when (page) {
                 0 ->
                     StepFirstOnboardingScreenContent(
-                        modifier = Modifier.fillMaxSize(),
+                        modifier = Modifier.fillMaxSize()
                     )
                 1 ->
                     StepSecondOnboardingScreenContent(
-                        modifier = Modifier.fillMaxSize(),
+                        modifier = Modifier.fillMaxSize()
                     )
                 2 ->
                     StepThirdOnboardingScreenContent(
-                        modifier = Modifier.fillMaxSize(),
+                        modifier = Modifier.fillMaxSize()
                     )
                 3 ->
                     StepFourthOnboardingScreenContent(
-                        modifier = Modifier.fillMaxSize(),
+                        modifier = Modifier.fillMaxSize()
                     )
             }
         }
