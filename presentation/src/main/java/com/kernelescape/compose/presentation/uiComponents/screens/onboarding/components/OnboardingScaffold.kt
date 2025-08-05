@@ -20,7 +20,6 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
@@ -35,37 +34,37 @@ fun OnboardingScaffold(
     buttonText: String,
     onContinueClick: () -> Unit,
     onCloseClick: () -> Unit,
-    content: @Composable () -> Unit,
+    content: @Composable () -> Unit
 ) {
     val sfProTextMedium = FontFamily(Font(R.font.sf_pro_text_regular, weight = FontWeight.Medium))
 
     Box(
         modifier =
-            Modifier
-                .fillMaxSize()
-                .background(MaterialTheme.colorScheme.background)
-                .statusBarsPadding()
-                .navigationBarsPadding()
-                .padding(all = 4.dp),
+        Modifier
+            .fillMaxSize()
+            .background(MaterialTheme.colorScheme.background)
+            .statusBarsPadding()
+            .navigationBarsPadding()
+            .padding(all = 4.dp)
     ) {
         // Основная колонка с контентом
         Column(
             modifier =
-                Modifier
-                    .fillMaxSize()
-                    .padding(
-                        horizontal = 20.dp,
-                    ),
-            horizontalAlignment = Alignment.CenterHorizontally,
+            Modifier
+                .fillMaxSize()
+                .padding(
+                    horizontal = 20.dp
+                ),
+            horizontalAlignment = Alignment.CenterHorizontally
         ) {
             // Контент экрана (иллюстрация, заголовок, подзаголовок) - больше места
             Box(
                 modifier =
-                    Modifier
-                        .fillMaxWidth()
-                        .weight(3f)
-                        .padding(top = 24.dp),
-                contentAlignment = Alignment.TopCenter,
+                Modifier
+                    .fillMaxWidth()
+                    .weight(3f)
+                    .padding(top = 24.dp),
+                contentAlignment = Alignment.TopCenter
             ) {
                 content()
 
@@ -75,29 +74,29 @@ fun OnboardingScaffold(
                     contentDescription = "Close",
                     tint = MaterialTheme.colorScheme.secondary,
                     modifier =
-                        Modifier
-                            .align(Alignment.TopEnd)
-                            .padding(
-                                top = 16.dp,
-                                end = 16.dp,
-                            ).clickable { onCloseClick() },
+                    Modifier
+                        .align(Alignment.TopEnd)
+                        .padding(
+                            top = 16.dp,
+                            end = 16.dp
+                        ).clickable { onCloseClick() }
                 )
             }
 
             // Индикаторы шагов - компактно
             Box(
                 modifier =
-                    Modifier
-                        .fillMaxWidth()
-                        .padding(vertical = 16.dp),
+                Modifier
+                    .fillMaxWidth()
+                    .padding(vertical = 16.dp),
                 // Фиксированный отступ вместо веса
-                contentAlignment = Alignment.Center,
+                contentAlignment = Alignment.Center
             ) {
                 AnimatedStepIndicator(
                     currentStep = currentStep,
                     totalSteps = 4,
                     activeColor = MaterialTheme.colorScheme.secondary,
-                    inactiveColor = MaterialTheme.colorScheme.secondary.copy(alpha = 0.3f),
+                    inactiveColor = MaterialTheme.colorScheme.secondary.copy(alpha = 0.3f)
                 )
             }
 
@@ -108,18 +107,18 @@ fun OnboardingScaffold(
             Button(
                 onClick = onContinueClick,
                 modifier =
-                    Modifier
-                        .fillMaxWidth()
-                        .height(60.dp)
-                        .padding(horizontal = 8.dp),
+                Modifier
+                    .fillMaxWidth()
+                    .height(60.dp)
+                    .padding(horizontal = 8.dp),
                 shape = RoundedCornerShape(80.dp),
-                colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.primary),
+                colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.primary)
             ) {
                 Text(
                     text = buttonText,
                     fontSize = 17.sp,
                     fontFamily = sfProTextMedium,
-                    color = MaterialTheme.colorScheme.onPrimary,
+                    color = MaterialTheme.colorScheme.onPrimary
                 )
             }
         }

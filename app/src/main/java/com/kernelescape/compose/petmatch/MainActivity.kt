@@ -19,7 +19,7 @@ class MainActivity : ComponentActivity() {
                 val navController = rememberNavController()
                 AppNavHost(
                     navController = navController,
-                    modifier = Modifier.fillMaxSize(),
+                    modifier = Modifier.fillMaxSize()
                 )
             }
         }

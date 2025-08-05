@@ -18,10 +18,10 @@ import com.kernelescape.compose.presentation.uiComponents.screens.onboarding.com
 @Composable
 fun OnboardingNavHost(
     onFinishOnboarding: () -> Unit,
-    onSkipOnboarding: () -> Unit,
+    onSkipOnboarding: () -> Unit
 ) {
     OnboardingPagerScreen(
         onFinishOnboarding = onFinishOnboarding,
-        onCloseClick = onSkipOnboarding,
+        onCloseClick = onSkipOnboarding
     )
 }

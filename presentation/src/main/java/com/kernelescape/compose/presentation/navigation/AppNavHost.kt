@@ -16,14 +16,14 @@ import com.kernelescape.compose.presentation.navigation.routes.AppRoutes
 @Composable
 fun AppNavHost(
     navController: NavHostController,
-    modifier: Modifier = Modifier,
+    modifier: Modifier = Modifier
 ) {
     NavHost(
         navController = navController,
         startDestination = AppRoutes.Onboarding.route,
         enterTransition = { EnterTransition.None },
         exitTransition = { ExitTransition.None },
-        modifier = modifier,
+        modifier = modifier
     ) {
         // Дочерний NavHost для онбординга с собственным Scaffold
         composable(AppRoutes.Onboarding.route) {
@@ -33,7 +33,7 @@ fun AppNavHost(
                 },
                 onSkipOnboarding = {
                     // TODO: Navigate to main app after onboarding
-                },
+                }
             )
         }
     }

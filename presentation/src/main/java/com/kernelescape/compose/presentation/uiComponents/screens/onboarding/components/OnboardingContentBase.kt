@@ -17,7 +17,6 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import com.kernelescape.compose.resources.R
 
 /**
  * Базовый компонент для контента экранов онбординга
@@ -28,30 +27,29 @@ fun OnboardingContentBase(
     @DrawableRes illustrationRes: Int,
     title: String,
     subtitle: String,
-    modifier: Modifier = Modifier,
+    modifier: Modifier = Modifier
 ) {
-
     Column(
         modifier = modifier.fillMaxWidth(),
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Top,
+        verticalArrangement = Arrangement.Top
     ) {
         // Illustration - картинка (адаптивная)
         Box(
             modifier =
-                Modifier
-                    .fillMaxWidth()
-                    .padding(bottom = 24.dp),
-            contentAlignment = Alignment.Center,
+            Modifier
+                .fillMaxWidth()
+                .padding(bottom = 24.dp),
+            contentAlignment = Alignment.Center
         ) {
             Image(
                 painter = painterResource(id = illustrationRes),
                 contentDescription = null,
                 contentScale = ContentScale.Fit,
                 modifier =
-                    Modifier
-                        .fillMaxWidth(0.85f) // 85% от ширины экрана
-                        .heightIn(max = 280.dp), // Максимальная высота с возможностью уменьшения
+                Modifier
+                    .fillMaxWidth(0.85f) // 85% от ширины экрана
+                    .heightIn(max = 280.dp) // Максимальная высота с возможностью уменьшения
             )
         }
 
@@ -61,11 +59,11 @@ fun OnboardingContentBase(
             style = MaterialTheme.typography.titleLarge,
             color = MaterialTheme.colorScheme.onBackground,
             modifier =
-                Modifier
-                    .fillMaxWidth()
-                    .padding(horizontal = 16.dp)
-                    .padding(bottom = 16.dp),
-            textAlign = TextAlign.Center,
+            Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 16.dp)
+                .padding(bottom = 16.dp),
+            textAlign = TextAlign.Center
         )
 
         // Subtitle - подтекст
@@ -75,10 +73,10 @@ fun OnboardingContentBase(
             color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.7f),
             textAlign = TextAlign.Center,
             modifier =
-                Modifier
-                    .fillMaxWidth()
-                    .padding(horizontal = 16.dp)
-                    .padding(bottom = 16.dp),
+            Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 16.dp)
+                .padding(bottom = 16.dp)
         )
     }
 }
