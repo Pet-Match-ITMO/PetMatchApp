@@ -1,5 +1,11 @@
 plugins {
     kotlin("jvm")
+    alias(libs.plugins.ktlint)
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
 }
 
 kotlin {
@@ -9,5 +15,5 @@ kotlin {
 }
 
 dependencies {
-
+    testImplementation(kotlin("test"))
 }
