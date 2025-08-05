@@ -14,7 +14,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -31,9 +30,6 @@ fun OnboardingContentBase(
     subtitle: String,
     modifier: Modifier = Modifier,
 ) {
-    // Единые цвета для всех экранов онбординга
-    val textColor = colorResource(id = R.color.onboarding_text_primary)
-    val secondaryTextColor = colorResource(id = R.color.onboarding_text_secondary)
 
     Column(
         modifier = modifier.fillMaxWidth(),
@@ -63,7 +59,7 @@ fun OnboardingContentBase(
         Text(
             text = title,
             style = MaterialTheme.typography.titleLarge,
-            color = textColor,
+            color = MaterialTheme.colorScheme.onBackground,
             modifier =
                 Modifier
                     .fillMaxWidth()
@@ -76,7 +72,7 @@ fun OnboardingContentBase(
         Text(
             text = subtitle,
             style = MaterialTheme.typography.titleMedium,
-            color = secondaryTextColor,
+            color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.7f),
             textAlign = TextAlign.Center,
             modifier =
                 Modifier

@@ -5,6 +5,7 @@ import androidx.compose.animation.core.*
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
@@ -24,8 +25,8 @@ import androidx.compose.ui.unit.dp
 fun AnimatedStepIndicator(
     currentStep: Int,
     totalSteps: Int = 4,
-    activeColor: Color = Color(0xFFDB644E),
-    inactiveColor: Color = Color(0xFFD9A08E),
+    activeColor: Color = MaterialTheme.colorScheme.secondary,
+    inactiveColor: Color = MaterialTheme.colorScheme.secondary.copy(alpha = 0.5f),
 ) {
     Row(
         modifier = Modifier.padding(vertical = 4.dp),

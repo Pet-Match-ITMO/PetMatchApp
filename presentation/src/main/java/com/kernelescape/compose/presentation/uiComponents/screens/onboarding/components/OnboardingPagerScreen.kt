@@ -56,15 +56,13 @@ fun OnboardingPagerScreen(
         }
     }
 
-    // ИСПРАВЛЕНО: OnboardingScaffold вынесен за пределы HorizontalPager для создания общих UI элементов
     OnboardingScaffold(
         currentStep = pagerState.currentPage + 1,
         buttonText = buttonText,
         onContinueClick = onContinueClick,
         onCloseClick = onCloseClick,
     ) {
-        // HorizontalPager теперь содержит только контент без дублирования UI элементов
-        HorizontalPager(
+            HorizontalPager(
             state = pagerState,
             modifier = Modifier.fillMaxSize(),
             userScrollEnabled = true,

@@ -1,0 +1,20 @@
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+indent_style = space
+indent_size = 4
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.{kt,kts}]
+indent_size = 4
+# Disable function naming rule for Composable functions
+ktlint_function-naming = disabled
+# Disable spacing rules to allow aligned comments with extra spaces
+ktlint_standard_no-multi-spaces = disabled
+ktlint_standard_spacing-between-declarations-with-comments = disabled
+ktlint_standard_spacing-between-declarations-with-annotations = disabled
+# Alternative: you can also disable specific rules
+# ktlint_standard_function-naming = disabled

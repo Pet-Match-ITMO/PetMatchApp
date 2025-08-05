@@ -9,6 +9,12 @@ plugins {
 
 subprojects {
     apply(plugin = "org.jlleitschuh.gradle.ktlint")
+    
+    configure<org.jlleitschuh.gradle.ktlint.KtlintExtension> {
+        filter {
+            exclude("**/build/**")
+        }
+    }
 }
 
 // Конфигурация репозиториев для всех проектов

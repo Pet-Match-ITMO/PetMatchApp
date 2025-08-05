@@ -15,6 +15,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -38,15 +39,11 @@ fun OnboardingScaffold(
 ) {
     val sfProTextMedium = FontFamily(Font(R.font.sf_pro_text_regular, weight = FontWeight.Medium))
 
-    val backgroundColor = Color(0xFFF4F4F4)
-    val primaryColor = Color(0xFF35A2AB)
-    val accentColor = Color(0xFFDB644E)
-
     Box(
         modifier =
             Modifier
                 .fillMaxSize()
-                .background(backgroundColor)
+                .background(MaterialTheme.colorScheme.background)
                 .statusBarsPadding()
                 .navigationBarsPadding()
                 .padding(all = 4.dp),
@@ -76,7 +73,7 @@ fun OnboardingScaffold(
                 Icon(
                     painter = painterResource(id = R.drawable.ic_close_circle),
                     contentDescription = "Close",
-                    tint = accentColor,
+                    tint = MaterialTheme.colorScheme.secondary,
                     modifier =
                         Modifier
                             .align(Alignment.TopEnd)
@@ -99,8 +96,8 @@ fun OnboardingScaffold(
                 AnimatedStepIndicator(
                     currentStep = currentStep,
                     totalSteps = 4,
-                    activeColor = accentColor,
-                    inactiveColor = Color(0xFFD9A08E),
+                    activeColor = MaterialTheme.colorScheme.secondary,
+                    inactiveColor = MaterialTheme.colorScheme.secondary.copy(alpha = 0.3f),
                 )
             }
 
@@ -116,13 +113,13 @@ fun OnboardingScaffold(
                         .height(60.dp)
                         .padding(horizontal = 8.dp),
                 shape = RoundedCornerShape(80.dp),
-                colors = ButtonDefaults.buttonColors(containerColor = primaryColor),
+                colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.primary),
             ) {
                 Text(
                     text = buttonText,
                     fontSize = 17.sp,
                     fontFamily = sfProTextMedium,
-                    color = Color.White,
+                    color = MaterialTheme.colorScheme.onPrimary,
                 )
             }
         }
