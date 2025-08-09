@@ -11,4 +11,15 @@
     <!-- Onboarding colors -->
     <color name="onboarding_text_primary">#FF2A3138</color>
     <color name="onboarding_text_secondary">#FF2D343D</color>
+    
+    <!-- Registration colors -->
+    <color name="registration_primary_text">#FF2A3138</color>
+    <color name="registration_secondary_text">#FF6D7278</color>
+    <color name="registration_accent_orange">#FFDB643E</color>
+    <color name="registration_accent_teal">#FF35A2AB</color>
+    <color name="registration_accent_orange_alt">#FFDA6433</color>
+    <color name="registration_accent_light_teal">#FFD9E9EB</color>
+    <color name="registration_background_light">#FFF5F5F5</color>
+    <color name="registration_white">#FFFFFFFF</color>
+    <color name="registration_background_white">#FFFFFFFF</color>
 </resources>
