@@ -1,0 +1,14 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android" android:width="20dp" android:height="20dp" android:viewportWidth="24" android:viewportHeight="24">
+    <!-- Map pin outline -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#6C4DFE"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M12,22c0,0 7,-6.1 7,-12a7,7 0 1,0 -14,0c0,5.9 7,12 7,12z"/>
+    <!-- Pin center -->
+    <path
+        android:fillColor="#6C4DFE"
+        android:pathData="M12,10a2,2 0 1,0 0,-4 2,2 0 0,0 0,4z"/>
+</vector>

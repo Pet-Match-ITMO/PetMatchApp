@@ -20,10 +20,8 @@ class MainActivity : ComponentActivity() {
         setContent {
             PetMatchAppTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
+                    // Навигация на экран профиля
+                    com.kernelescape.compose.petmatch.ui.ProfileScreen()
                 }
             }
         }
@@ -42,6 +40,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Composable
 fun GreetingPreview() {
     PetMatchAppTheme {
-        Greeting("Android")
+        // Превью экрана профиля вместо Greeting
+        com.kernelescape.compose.petmatch.ui.ProfileScreen()
     }
 }
