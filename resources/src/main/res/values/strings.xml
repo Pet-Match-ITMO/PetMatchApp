@@ -13,4 +13,214 @@
     
     <string name="onboarding_step_fourth_title">Помощь приютам</string>
     <string name="onboarding_step_fourth_subtitle">Поддерживайте приюты для животных и помогайте питомцам найти новый дом</string>
+    
+    <!-- Registration strings -->
+    <string name="registration_title">Регистрация</string>
+    <string name="registration_subtitle">Найдите себе пушистого друга или добавьте на платформу питомцев и информацию о вашем приюте</string>
+    <string name="registration_looking_for_pet">Ищу питомца</string>
+    <string name="registration_shelter_worker">Работаю в приюте</string>
+    <string name="registration_already_have_account">Уже есть аккаунт</string>
+    <string name="registration_illustration_content_description">Иллюстрация регистрации</string>
+    <string name="pet_icon_content_description">Иконка питомца</string>
+    <string name="shelter_icon_content_description">Иконка приюта</string>
+    
+    <!-- Common registration strings -->
+    <string name="registration_step_counter">Шаг %1$d из %2$d</string>
+    <string name="registration">Регистрация</string>
+    <string name="registration_step1_title">Личные данные</string>
+    <string name="registration_step2_title">Параметры поиска</string>
+    <string name="registration_step3_title">Расширенные данные</string>
+    <string name="registration_button_next">Далее</string>
+    <string name="registration_button_confirm">Подтвердить регистрацию</string>
+    <string name="registration_button_reset_params">Сбросить параметры</string>
+    <string name="registration_field_full_name">ФИО</string>
+    <string name="registration_field_shelter_name">Название приюта</string>
+    <string name="registration_field_amount_of_animals_in_shelter">Количество питомцев вприюте</string>
+    <string name="registration_field_shelter_address">Адрес приюта</string>
+    <string name="registration_field_city">Город</string>
+    <string name="registration_field_post">Должность</string>
+    <string name="registration_official_site">Официальный сайт</string>
+    <string name="registration_bills_for_charity">Счёт для сбора пожертвований</string>
+    <string name="registration_field_email">Email</string>
+    <string name="registration_field_work_email">Рабочий Email</string>
+    <string name="registration_field_phone">Телефон</string>
+    <string name="registration_field_password">Придумайте пароль</string>
+    <string name="registration_field_confirm_password">Повторите пароль</string>
+    
+    <!-- Common option strings -->
+    <string name="registration_option_any_masculine">Любой</string>
+    <string name="registration_option_any_feminine">Любая</string>
+    <string name="registration_option_any_neuter">Любое</string>
+    
+    <!-- Pet type strings -->
+    <string name="registration_pet_type_title">Тип питомца</string>
+    <string name="registration_pet_type_cat">Кошка</string>
+    <string name="registration_pet_type_dog">Собака</string>
+    <string name="registration_pet_type_other">Другой</string>
+    
+    <!-- Age strings -->
+    <string name="registration_age_title">Возраст</string>
+    <string name="registration_age_up_to_6_months">До 6 месяцев</string>
+    <string name="registration_age_up_to_1_year">До 1 года</string>
+    <string name="registration_age_1_to_3_years">1-3 года</string>
+    <string name="registration_age_3_to_5_years">3-5 лет</string>
+    <string name="registration_age_5_to_7_years">5-7 лет</string>
+    <string name="registration_age_7_to_10_years">7-10 лет</string>
+    <string name="registration_age_over_10_years">Старше 10 лет</string>
+    
+    <!-- Gender strings -->
+    <string name="registration_gender_title">Пол</string>
+    <string name="registration_gender_male">Мальчик</string>
+    <string name="registration_gender_female">Девочка</string>
+    
+    <!-- Activity strings -->
+    <string name="registration_activity_title">Активность</string>
+    <string name="registration_activity_passive">Пассивный</string>
+    <string name="registration_activity_moderate">Умеренно активный</string>
+    <string name="registration_activity_active">Активный</string>
+    <string name="registration_activity_hyperactive">Гиперактивный</string>
+    
+    <!-- Character strings -->
+    <string name="registration_character_title">Характер</string>
+    <string name="registration_character_calm">Спокойный</string>
+    <string name="registration_character_shy">Пугливый</string>
+    <string name="registration_character_gentle">Мягкий</string>
+    <string name="registration_character_affectionate">Ласковый</string>
+    <string name="registration_character_friendly">Дружелюбный</string>
+    <string name="registration_character_playful">Игривый</string>
+    <string name="registration_character_restless">Непоседливый</string>
+    
+    <!-- Health strings -->
+    <string name="registration_health_title">Здоровье</string>
+    <string name="registration_health_fully_healthy">Полностью здоров</string>
+    <string name="registration_health_sterilized">Стерилизован</string>
+    <string name="registration_health_vaccinated">Сделаны прививки</string>
+    <string name="registration_health_allergies">Аллергия</string>
+    <string name="registration_health_minor_conditions">Есть лёгкие заболевания</string>
+    <string name="registration_health_recovering">Идёт на поправку после лечения</string>
+    <string name="registration_health_recurring_conditions">Есть бостряющиеся заболевания</string>
+    <string name="registration_health_chronic_conditions">Есть хронические болезни</string>
+    <string name="registration_health_physical_injuries">Физические увечья</string>
+    <string name="registration_health_disability">Инвалидность</string>
+    
+    <!-- Pet compatibility strings -->
+    <string name="registration_pet_compatibility_title">Совместимость с вашими питомцами</string>
+    <string name="registration_pet_compatibility_not_required">Не требуется</string>
+    <string name="registration_pet_compatibility_cats">С котом</string>
+    <string name="registration_pet_compatibility_dogs">С собакой</string>
+    <string name="registration_pet_compatibility_other">С другими (хомяки, черепахи и т.д.)</string>
+    <string name="registration_pet_compatibility_all">Со всеми</string>
+    
+    <!-- Human compatibility strings -->
+    <string name="registration_human_compatibility_title">Совместимость с людьми</string>
+    <string name="registration_human_compatibility_all">Со всеми</string>
+    <string name="registration_human_compatibility_children">Не боятся маленьких детей</string>
+    <string name="registration_human_compatibility_noisy">Не боятся шумных людей</string>
+    <string name="registration_human_compatibility_men">Не боятся мужчин</string>
+    
+    <!-- Registration Finder - Step 1: Personal Data -->
+    <string name="registration_finder_step1_title">Личные данные</string>
+    <string name="registration_finder_step1_button_next">Далее</string>
+    <string name="registration_finder_field_name">Имя</string>
+    <string name="registration_finder_field_city">Город</string>
+    <string name="registration_finder_field_email">Email</string>
+    <string name="registration_finder_field_password">Придумайте пароль</string>
+    <string name="registration_finder_field_confirm_password">Повторите пароль</string>
+    <string name="registration_finder_password_visibility">PasswordVisibility</string>
+    
+    <!-- Registration Finder - Step 2: Search Parameters -->
+    <string name="registration_finder_step2_title">Параметры поиска</string>
+    <string name="registration_finder_step2_button_next">Далее</string>
+    <string name="registration_finder_step2_button_reset">Сбросить параметры</string>
+    <string name="registration_finder_pet_type_title">Тип питомца</string>
+    <string name="registration_finder_pet_type_any">Любой</string>
+    <string name="registration_finder_pet_type_cat">Кошка</string>
+    <string name="registration_finder_pet_type_dog">Собака</string>
+    <string name="registration_finder_pet_type_other">Другой</string>
+    <string name="registration_finder_age_title">Возраст</string>
+    <string name="registration_finder_age_any">Любой</string>
+    <string name="registration_finder_age_up_to_6_months">До 6 месяцев</string>
+    <string name="registration_finder_age_up_to_1_year">До 1 года</string>
+    <string name="registration_finder_age_1_3_years">1-3 года</string>
+    <string name="registration_finder_age_3_5_years">3-5 лет</string>
+    <string name="registration_finder_age_5_7_years">5-7 лет</string>
+    <string name="registration_finder_age_7_10_years">7-10 лет</string>
+    <string name="registration_finder_age_over_10_years">Старше 10 лет</string>
+    <string name="registration_finder_gender_title">Пол</string>
+    <string name="registration_finder_gender_any">Любой</string>
+    <string name="registration_finder_gender_male">Мальчик</string>
+    <string name="registration_finder_gender_female">Девочка</string>
+    <string name="registration_finder_breed_title">Порода</string>
+    <string name="registration_finder_breed_any">Любая</string>
+    <string name="registration_finder_breed_mixed">Беспородный</string>
+    <string name="registration_finder_breed_crossbreed">Метис</string>
+    <string name="registration_finder_breed_purebred">Породистый</string>
+    <string name="registration_finder_fur_title">Шерсть</string>
+    <string name="registration_finder_fur_any">Любая</string>
+    <string name="registration_finder_fur_hairless">Без шерсти</string>
+    <string name="registration_finder_fur_short">Короткошерстный</string>
+    <string name="registration_finder_fur_long">Длинношёрстный</string>
+    <string name="registration_finder_size_title">Размер</string>
+    <string name="registration_finder_size_any">Любой</string>
+    <string name="registration_finder_size_small">Маленький</string>
+    <string name="registration_finder_size_medium">Средний</string>
+    <string name="registration_finder_size_large">Крупный</string>
+    
+    <!-- Registration Finder - Step 3: Extended Data -->
+    <string name="registration_finder_step3_title">Расширенные данные</string>
+    <string name="registration_finder_step3_button_confirm">Подтвердить регистрацию</string>
+    <string name="registration_finder_step3_button_reset">Сбросить параметры</string>
+    <string name="registration_finder_activity_title">Активность</string>
+    <string name="registration_finder_activity_any">Любая</string>
+    <string name="registration_finder_activity_passive">Пассивный</string>
+    <string name="registration_finder_activity_moderate">Умеренно активный</string>
+    <string name="registration_finder_activity_active">Активный</string>
+    <string name="registration_finder_activity_hyperactive">Гиперактивный</string>
+    <string name="registration_finder_character_title">Характер</string>
+    <string name="registration_finder_character_any">Любой</string>
+    <string name="registration_finder_character_calm">Спокойный</string>
+    <string name="registration_finder_character_shy">Пугливый</string>
+    <string name="registration_finder_character_gentle">Мягкий</string>
+    <string name="registration_finder_character_affectionate">Ласковый</string>
+    <string name="registration_finder_character_friendly">Дружелюбный</string>
+    <string name="registration_finder_character_playful">Игривый</string>
+    <string name="registration_finder_character_restless">Непоседливый</string>
+    <string name="registration_finder_health_title">Здоровье</string>
+    <string name="registration_finder_health_any">Любое</string>
+    <string name="registration_finder_health_fully_healthy">Полностью здоров</string>
+    <string name="registration_finder_health_sterilized">Стерилизован</string>
+    <string name="registration_finder_health_vaccinated">Сделаны прививки</string>
+    <string name="registration_finder_health_allergy">Аллергия</string>
+    <string name="registration_finder_health_minor_diseases">Есть лёгкие заболевания</string>
+    <string name="registration_finder_health_recovering">Идёт на поправку после лечения</string>
+    <string name="registration_finder_health_recurring_diseases">Есть бостряющиеся заболевания</string>
+    <string name="registration_finder_health_chronic_diseases">Есть хронические болезни</string>
+    <string name="registration_finder_health_physical_injuries">Физические увечья</string>
+    <string name="registration_finder_health_disability">Инвалидность</string>
+    <string name="registration_finder_pet_compatibility_title">Совместимость с вашими питомцами</string>
+    <string name="registration_finder_pet_compatibility_not_required">Не требуется</string>
+    <string name="registration_finder_pet_compatibility_with_cat">С котом</string>
+    <string name="registration_finder_pet_compatibility_with_dog">С собакой</string>
+    <string name="registration_finder_pet_compatibility_with_others">С другими (хомяки, черепахи и т.д.)</string>
+    <string name="registration_finder_pet_compatibility_with_all">Со всеми</string>
+    <string name="registration_finder_human_compatibility_title">Совместимость с людьми</string>
+    <string name="registration_finder_human_compatibility_with_all">Со всеми</string>
+    <string name="registration_finder_human_compatibility_not_afraid_children">Не боятся маленьких детей</string>
+    <string name="registration_finder_human_compatibility_not_afraid_noisy">Не боятся шумных людей</string>
+    <string name="registration_finder_human_compatibility_not_afraid_men">Не боятся мужчин</string>
+    
+    <!-- Registration Worker strings -->
+    <string name="registration_worker_step_data_title">Данные о приюте</string>
+    <string name="registration_worker_step_data_confirm_button">Подтвердить регистрацию</string>
+    <string name="registration_worker_pet_type_title">Тип питомца</string>
+    <string name="registration_worker_hide_shelter_address">Скрывать точный адресс приюта</string>
+    <string name="registration_worker_add_bill">Добавить счет</string>
+    <string name="registration_worker_add_button">Добавить</string>
+    <string name="registration_worker_upload_id_hint">Скан  удостоверения сотрудника</string>
+    <string name="registration_worker_upload_contract_hint">Договор о трудоустройстве в приют</string>
+    <string name="registration_worker_upload_file_title">Загрузите файл</string>
+    <string name="registration_worker_pet_type_all">Все</string>
+    <string name="registration_worker_pet_type_cats">Кошки</string>
+    <string name="registration_worker_pet_type_dogs">Собаки</string>
+    <string name="registration_worker_pet_type_other">Другие</string>
 </resources>

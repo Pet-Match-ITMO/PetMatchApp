@@ -7,11 +7,12 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
 import com.kernelescape.compose.presentation.navigation.routes.AppRoutes
 
 /**
  * Главный NavHost приложения, который управляет навигацией между основными разделами.
- * Содержит только онбординг NavHost.
+ * Содержит онбординг и регистрацию NavHost.
  */
 @Composable
 fun AppNavHost(
@@ -29,11 +30,22 @@ fun AppNavHost(
         composable(AppRoutes.Onboarding.route) {
             OnboardingNavHost(
                 onFinishOnboarding = {
-                    // TODO: Navigate to main app after onboarding
+                    navController.navigate(AppRoutes.Registration.route) {
+                        popUpTo(AppRoutes.Onboarding.route) { inclusive = true }
+                    }
                 },
                 onSkipOnboarding = {
-                    // TODO: Navigate to main app after onboarding
+                    navController.navigate(AppRoutes.Registration.route) {
+                        popUpTo(AppRoutes.Onboarding.route) { inclusive = true }
+                    }
                 }
+            )
+        }
+
+        // Дочерний NavHost для регистрации
+        composable(AppRoutes.Registration.route) {
+            RegistrationNavHost(
+                navController = rememberNavController()
             )
         }
     }

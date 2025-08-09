@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Base colors -->
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
@@ -8,7 +9,46 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     
+    <!-- Light theme colors -->
+    <color name="light_primary">#FF35A2AB</color>
+    <color name="light_secondary">#FFDB644E</color>
+    <color name="light_tertiary">#FF6B9B37</color>
+    <color name="light_background">#FFF4F4F4</color>
+    <color name="light_surface">#FFFFFFFF</color>
+    <color name="on_light_primary">#FFFFFFFF</color>
+    <color name="on_light_secondary">#FFFFFFFF</color>
+    <color name="on_light_background">#FF1C1B1F</color>
+    <color name="on_light_surface">#FF1C1B1F</color>
+    
+    <!-- Pet colors -->
+    <color name="pet_orange">#FFFF8A50</color>
+    <color name="pet_brown">#FF8D6E63</color>
+    <color name="pet_blue">#FF42A5F5</color>
+    
+    <!-- Status colors -->
+    <color name="error">#FFB00020</color>
+    <color name="success">#FF4CAF50</color>
+    
     <!-- Onboarding colors -->
     <color name="onboarding_text_primary">#FF2A3138</color>
     <color name="onboarding_text_secondary">#FF2D343D</color>
+    
+    <!-- Registration colors -->
+    <color name="registration_primary_text">#FF2A3138</color>
+    <color name="registration_secondary_text">#FF6D7278</color>
+    <color name="registration_accent_orange">#FFDB643E</color>
+    <color name="registration_accent_teal">#FF35A2AB</color>
+    <color name="registration_accent_orange_alt">#FFDA6433</color>
+    <color name="registration_accent_light_teal">#FFD9E9EB</color>
+    <color name="registration_background_light">#FFF5F5F5</color>
+    <color name="registration_white">#FFFFFFFF</color>
+    <color name="registration_background_white">#FFFFFFFF</color>
+    
+    <!-- Additional registration colors -->
+    <color name="registration_text_secondary">#FF6D7278</color>
+    <color name="registration_switch_track">#FFC0C2C4</color>
+    <color name="registration_file_upload_border">#FF4BB3C9</color>
+    <color name="registration_file_upload_background">#FFE0F2F1</color>
+    <color name="registration_text_primary">#FF2A3138</color>
+    <color name="registration_file_upload_accent">#FFE65100</color>
 </resources>

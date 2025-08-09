@@ -1,4 +1,4 @@
-package com.kernelescape.compose.petmatch.ui.theme
+package com.kernelescape.compose.resources.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
