@@ -65,7 +65,6 @@ fun RegistrationScaffold(
                 content()
             }
 
-
             // Минимальный отступ перед кнопкой (только если есть кнопка)
             if (buttonText != null) {
                 Spacer(modifier = Modifier.weight(2f))

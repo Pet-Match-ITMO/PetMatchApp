@@ -1,4 +1,4 @@
-package com.kernelescape.compose.presentation.uiComponents.screens.registration.registrationForFinder
+package com.kernelescape.compose.presentation.uiComponents.screens.registration.registrationForWorker
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.PaddingValues
@@ -14,28 +14,29 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.kernelescape.compose.presentation.uiComponents.screens.registration.components.PasswordTextField
-import com.kernelescape.compose.presentation.uiComponents.screens.registration.components.RegistrationForFindersScaffold
+import com.kernelescape.compose.presentation.uiComponents.screens.registration.components.RegistrationForWorkersScaffold
 import com.kernelescape.compose.presentation.uiComponents.screens.registration.components.RegistrationTextField
 import com.kernelescape.compose.resources.R
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun FirstStepFinderRegistration(
+fun FirstStepWorkerRegistration(
     modifier: Modifier = Modifier,
     onBackClick: () -> Unit,
     onNextClick: () -> Unit
 ) {
     var name by remember { mutableStateOf("") }
-    var city by remember { mutableStateOf("") }
+    var position by remember { mutableStateOf("") }
+    var phone by remember { mutableStateOf("") }
     var email by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
     var confirmPassword by remember { mutableStateOf("") }
     var passwordVisible by remember { mutableStateOf(false) }
     var confirmPasswordVisible by remember { mutableStateOf(false) }
 
-    RegistrationForFindersScaffold(
+    RegistrationForWorkersScaffold(
         currentStep = 1,
-        totalSteps = 3,
+        totalSteps = 2,
         stepTitle = stringResource(R.string.registration_step1_title),
         primaryButtonText = stringResource(R.string.registration_button_next),
         onPrimaryButtonClick = onNextClick,
@@ -56,9 +57,17 @@ fun FirstStepFinderRegistration(
 
                 item {
                     RegistrationTextField(
-                        value = city,
-                        onValueChange = { city = it },
-                        label = stringResource(R.string.registration_field_city)
+                        value = position,
+                        onValueChange = { position = it },
+                        label = stringResource(R.string.registration_field_post)
+                    )
+                }
+
+                item {
+                    RegistrationTextField(
+                        value = phone,
+                        onValueChange = { phone = it },
+                        label = stringResource(R.string.registration_field_phone)
                     )
                 }
 
@@ -66,7 +75,7 @@ fun FirstStepFinderRegistration(
                     RegistrationTextField(
                         value = email,
                         onValueChange = { email = it },
-                        label = stringResource(R.string.registration_field_email)
+                        label = stringResource(R.string.registration_field_work_email)
                     )
                 }
 

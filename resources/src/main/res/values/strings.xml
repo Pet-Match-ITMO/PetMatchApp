@@ -33,9 +33,17 @@
     <string name="registration_button_next">Далее</string>
     <string name="registration_button_confirm">Подтвердить регистрацию</string>
     <string name="registration_button_reset_params">Сбросить параметры</string>
-    <string name="registration_field_name">Имя</string>
+    <string name="registration_field_full_name">ФИО</string>
+    <string name="registration_field_shelter_name">Название приюта</string>
+    <string name="registration_field_amount_of_animals_in_shelter">Количество питомцев вприюте</string>
+    <string name="registration_field_shelter_address">Адрес приюта</string>
     <string name="registration_field_city">Город</string>
+    <string name="registration_field_post">Должность</string>
+    <string name="registration_official_site">Официальный сайт</string>
+    <string name="registration_bills_for_charity">Счёт для сбора пожертвований</string>
     <string name="registration_field_email">Email</string>
+    <string name="registration_field_work_email">Рабочий Email</string>
+    <string name="registration_field_phone">Телефон</string>
     <string name="registration_field_password">Придумайте пароль</string>
     <string name="registration_field_confirm_password">Повторите пароль</string>
     
@@ -200,4 +208,19 @@
     <string name="registration_finder_human_compatibility_not_afraid_children">Не боятся маленьких детей</string>
     <string name="registration_finder_human_compatibility_not_afraid_noisy">Не боятся шумных людей</string>
     <string name="registration_finder_human_compatibility_not_afraid_men">Не боятся мужчин</string>
+    
+    <!-- Registration Worker strings -->
+    <string name="registration_worker_step_data_title">Данные о приюте</string>
+    <string name="registration_worker_step_data_confirm_button">Подтвердить регистрацию</string>
+    <string name="registration_worker_pet_type_title">Тип питомца</string>
+    <string name="registration_worker_hide_shelter_address">Скрывать точный адресс приюта</string>
+    <string name="registration_worker_add_bill">Добавить счет</string>
+    <string name="registration_worker_add_button">Добавить</string>
+    <string name="registration_worker_upload_id_hint">Скан  удостоверения сотрудника</string>
+    <string name="registration_worker_upload_contract_hint">Договор о трудоустройстве в приют</string>
+    <string name="registration_worker_upload_file_title">Загрузите файл</string>
+    <string name="registration_worker_pet_type_all">Все</string>
+    <string name="registration_worker_pet_type_cats">Кошки</string>
+    <string name="registration_worker_pet_type_dogs">Собаки</string>
+    <string name="registration_worker_pet_type_other">Другие</string>
 </resources>

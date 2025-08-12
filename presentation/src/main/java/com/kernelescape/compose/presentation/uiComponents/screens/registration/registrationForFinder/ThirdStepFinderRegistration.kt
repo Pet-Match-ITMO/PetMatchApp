@@ -1,25 +1,26 @@
 package com.kernelescape.compose.presentation.uiComponents.screens.registration.registrationForFinder
 
-import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.material3.*
-import androidx.compose.runtime.*
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.layout.Layout
-import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.font.Font
-import androidx.compose.ui.text.font.FontFamily
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import com.kernelescape.compose.presentation.uiComponents.screens.registration.components.RegistrationForFindersScaffold
+import com.kernelescape.compose.presentation.uiComponents.screens.registration.components.TagSection
 import com.kernelescape.compose.resources.R
+import com.kernelescape.compose.resources.ui.theme.RegistrationAccentOrange
+import com.kernelescape.compose.resources.ui.theme.RegistrationPrimaryText
+import com.kernelescape.compose.resources.ui.theme.RegistrationSecondaryText
+import com.kernelescape.compose.resources.ui.theme.RegistrationWhite
 
 @Composable
 fun ThirdStepFinderRegistration(
@@ -27,8 +28,8 @@ fun ThirdStepFinderRegistration(
     onBackClick: () -> Unit = {},
     onConfirmClick: () -> Unit = {}
 ) {
-    val textPrimaryColor = colorResource(R.color.registration_primary_text)
-    val textSecondaryColor = colorResource(R.color.registration_secondary_text)
+    val textPrimaryColor = RegistrationPrimaryText
+    val textSecondaryColor = RegistrationSecondaryText
 
     // Default values for state
     val defaultActivity = stringResource(R.string.registration_option_any_feminine)
@@ -43,6 +44,10 @@ fun ThirdStepFinderRegistration(
     var selectedHealth by remember { mutableStateOf(defaultHealth) }
     var selectedPetCompatibility by remember { mutableStateOf(defaultPetCompatibility) }
     var selectedHumanCompatibility by remember { mutableStateOf(defaultHumanCompatibility) }
+
+    val accentColor = RegistrationAccentOrange
+    val primaryTextColor = RegistrationPrimaryText
+    val whiteColor = RegistrationWhite
 
     RegistrationForFindersScaffold(
         currentStep = 3,
@@ -67,7 +72,7 @@ fun ThirdStepFinderRegistration(
             ) {
                 // Activity tag group
                 item {
-                    TagGroup(
+                    TagSection(
                         title = stringResource(R.string.registration_activity_title),
                         tags = listOf(
                             stringResource(R.string.registration_option_any_feminine),
@@ -77,13 +82,17 @@ fun ThirdStepFinderRegistration(
                             stringResource(R.string.registration_activity_hyperactive)
                         ),
                         selectedTag = selectedActivity,
-                        onTagSelected = { selectedActivity = it }
+                        onTagSelected = { selectedActivity = it },
+                        accentColor = accentColor,
+                        primaryTextColor = primaryTextColor,
+                        whiteColor = whiteColor,
+                        chipShape = CircleShape
                     )
                 }
 
                 // Character tag group
                 item {
-                    TagGroup(
+                    TagSection(
                         title = stringResource(R.string.registration_character_title),
                         tags = listOf(
                             stringResource(R.string.registration_option_any_masculine),
@@ -96,13 +105,17 @@ fun ThirdStepFinderRegistration(
                             stringResource(R.string.registration_character_restless)
                         ),
                         selectedTag = selectedCharacter,
-                        onTagSelected = { selectedCharacter = it }
+                        onTagSelected = { selectedCharacter = it },
+                        accentColor = accentColor,
+                        primaryTextColor = primaryTextColor,
+                        whiteColor = whiteColor,
+                        chipShape = CircleShape
                     )
                 }
 
                 // Health tag group
                 item {
-                    TagGroup(
+                    TagSection(
                         title = stringResource(R.string.registration_health_title),
                         tags = listOf(
                             stringResource(R.string.registration_option_any_neuter),
@@ -118,13 +131,17 @@ fun ThirdStepFinderRegistration(
                             stringResource(R.string.registration_health_disability)
                         ),
                         selectedTag = selectedHealth,
-                        onTagSelected = { selectedHealth = it }
+                        onTagSelected = { selectedHealth = it },
+                        accentColor = accentColor,
+                        primaryTextColor = primaryTextColor,
+                        whiteColor = whiteColor,
+                        chipShape = CircleShape
                     )
                 }
 
                 // Pet compatibility tag group
                 item {
-                    TagGroup(
+                    TagSection(
                         title = stringResource(R.string.registration_pet_compatibility_title),
                         tags = listOf(
                             stringResource(R.string.registration_pet_compatibility_not_required),
@@ -134,13 +151,17 @@ fun ThirdStepFinderRegistration(
                             stringResource(R.string.registration_pet_compatibility_all)
                         ),
                         selectedTag = selectedPetCompatibility,
-                        onTagSelected = { selectedPetCompatibility = it }
+                        onTagSelected = { selectedPetCompatibility = it },
+                        accentColor = accentColor,
+                        primaryTextColor = primaryTextColor,
+                        whiteColor = whiteColor,
+                        chipShape = CircleShape
                     )
                 }
 
                 // Human compatibility tag group
                 item {
-                    TagGroup(
+                    com.kernelescape.compose.presentation.uiComponents.screens.registration.components.TagSection(
                         title = stringResource(R.string.registration_human_compatibility_title),
                         tags = listOf(
                             stringResource(R.string.registration_human_compatibility_all),
@@ -149,140 +170,16 @@ fun ThirdStepFinderRegistration(
                             stringResource(R.string.registration_human_compatibility_men)
                         ),
                         selectedTag = selectedHumanCompatibility,
-                        onTagSelected = { selectedHumanCompatibility = it }
+                        onTagSelected = { selectedHumanCompatibility = it },
+                        accentColor = accentColor,
+                        primaryTextColor = primaryTextColor,
+                        whiteColor = whiteColor,
+                        chipShape = CircleShape
                     )
                 }
             }
         }
     )
-}
-
-@Composable
-fun TagGroup(
-    title: String,
-    tags: List<String>,
-    selectedTag: String,
-    onTagSelected: (String) -> Unit
-) {
-    Column(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(horizontal = 20.dp),
-        verticalArrangement = Arrangement.spacedBy(8.dp)
-    ) {
-        Text(
-            text = title,
-            fontSize = 15.sp,
-            color = colorResource(R.color.registration_secondary_text),
-            modifier = Modifier.fillMaxWidth()
-        )
-
-        FlowRow(
-            modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.spacedBy(8.dp),
-            verticalArrangement = Arrangement.spacedBy(8.dp)
-        ) {
-            tags.forEach { tag ->
-                TagChip(
-                    text = tag,
-                    isSelected = tag == selectedTag,
-                    onClick = { onTagSelected(tag) }
-                )
-            }
-        }
-    }
-}
-
-@Composable
-fun FlowRow(
-    modifier: Modifier = Modifier,
-    horizontalArrangement: Arrangement.Horizontal = Arrangement.Start,
-    verticalArrangement: Arrangement.Vertical = Arrangement.Top,
-    content: @Composable () -> Unit
-) {
-    Layout(
-        content = content,
-        modifier = modifier
-    ) { measurables, constraints ->
-        val horizontalGapPx = 8.dp.roundToPx()
-        val verticalGapPx = 8.dp.roundToPx()
-
-        // Сначала измеряем все элементы один раз
-        val placeables = measurables.map { measurable ->
-            measurable.measure(constraints.copy(minWidth = 0))
-        }
-
-        val rows = mutableListOf<MutableList<androidx.compose.ui.layout.Placeable>>()
-        var currentRow = mutableListOf<androidx.compose.ui.layout.Placeable>()
-        var currentRowWidth = 0
-
-        placeables.forEach { placeable ->
-            if (currentRowWidth + placeable.width > constraints.maxWidth && currentRow.isNotEmpty()) {
-                rows.add(currentRow)
-                currentRow = mutableListOf()
-                currentRowWidth = 0
-            }
-
-            currentRow.add(placeable)
-            currentRowWidth += placeable.width + if (currentRow.size > 1) horizontalGapPx else 0
-        }
-
-        if (currentRow.isNotEmpty()) {
-            rows.add(currentRow)
-        }
-
-        val totalHeight = rows.sumOf { row -> row.maxOfOrNull { it.height } ?: 0 } +
-                if (rows.size > 1) (rows.size - 1) * verticalGapPx else 0
-
-        layout(constraints.maxWidth, totalHeight) {
-            var yPos = 0
-
-            rows.forEach { row ->
-                var xPos = 0
-                val rowHeight = row.maxOfOrNull { it.height } ?: 0
-
-                row.forEach { placeable ->
-                    placeable.place(xPos, yPos + (rowHeight - placeable.height) / 2)
-                    xPos += placeable.width + horizontalGapPx
-                }
-
-                yPos += rowHeight + verticalGapPx
-            }
-        }
-    }
-}
-
-@Composable
-fun TagChip(
-    text: String,
-    isSelected: Boolean,
-    onClick: () -> Unit
-) {
-    val backgroundColor = if (isSelected) {
-        colorResource(R.color.registration_accent_orange)
-    } else {
-        colorResource(R.color.registration_white)
-    }
-
-    val textColor = if (isSelected) {
-        colorResource(R.color.registration_white)
-    } else {
-        colorResource(R.color.registration_primary_text)
-    }
-
-    Surface(
-        modifier = Modifier
-            .clickable { onClick() },
-        shape = CircleShape,
-        color = backgroundColor
-    ) {
-        Text(
-            text = text,
-            fontSize = 15.sp,
-            color = textColor,
-            modifier = Modifier.padding(horizontal = 12.dp, vertical = 6.dp)
-        )
-    }
 }
 
 @Preview(showBackground = true)

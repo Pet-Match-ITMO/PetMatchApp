@@ -5,10 +5,12 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.kernelescape.compose.presentation.navigation.routes.RegistrationRoutes
-import com.kernelescape.compose.presentation.uiComponents.screens.registration.registrationHub.RegistrationHubScreen
 import com.kernelescape.compose.presentation.uiComponents.screens.registration.registrationForFinder.FirstStepFinderRegistration
 import com.kernelescape.compose.presentation.uiComponents.screens.registration.registrationForFinder.SecondStepFinderRegistration
 import com.kernelescape.compose.presentation.uiComponents.screens.registration.registrationForFinder.ThirdStepFinderRegistration
+import com.kernelescape.compose.presentation.uiComponents.screens.registration.registrationForWorker.FirstStepWorkerRegistration
+import com.kernelescape.compose.presentation.uiComponents.screens.registration.registrationForWorker.SecondStepWorkerRegistration
+import com.kernelescape.compose.presentation.uiComponents.screens.registration.registrationHub.RegistrationHubScreen
 
 /**
  * NavHost для управления навигацией в разделе регистрации.
@@ -30,7 +32,7 @@ fun RegistrationNavHost(
                     navController.navigate(RegistrationRoutes.FirstStepFinderRegistration.route)
                 },
                 onShelterWorkerClick = {
-                    // TODO: Implement shelter worker registration navigation
+                    navController.navigate(RegistrationRoutes.FirstStepWorkerRegistration.route)
                 },
                 onAlreadyHaveAccountClick = {
                     // TODO: Implement login navigation
@@ -40,7 +42,7 @@ fun RegistrationNavHost(
                 }
             )
         }
-        
+
         composable(route = RegistrationRoutes.FirstStepFinderRegistration.route) {
             FirstStepFinderRegistration(
                 onBackClick = {
@@ -51,7 +53,7 @@ fun RegistrationNavHost(
                 }
             )
         }
-        
+
         composable(route = RegistrationRoutes.SecondStepFinderRegistration.route) {
             SecondStepFinderRegistration(
                 onBackClick = {
@@ -62,7 +64,51 @@ fun RegistrationNavHost(
                 }
             )
         }
-        
+
+        composable(route = RegistrationRoutes.FirstStepWorkerRegistration.route) {
+            FirstStepWorkerRegistration(
+                onBackClick = {
+                    navController.popBackStack()
+                },
+                onNextClick = {
+                    navController.navigate(RegistrationRoutes.SecondStepWorkerRegistration.route)
+                }
+            )
+        }
+
+        composable(route = RegistrationRoutes.FirstStepWorkerRegistration.route) {
+            FirstStepWorkerRegistration(
+                onBackClick = {
+                    navController.popBackStack()
+                },
+                onNextClick = {
+                    navController.navigate(RegistrationRoutes.SecondStepWorkerRegistration.route)
+                }
+            )
+        }
+
+        composable(route = RegistrationRoutes.SecondStepWorkerRegistration.route) {
+            SecondStepWorkerRegistration(
+                onBack = {
+                    navController.popBackStack()
+                },
+                onComplete = {
+                    navController.popBackStack(RegistrationRoutes.RegistrationHub.route, inclusive = true)
+                }
+            )
+        }
+
+        composable(route = RegistrationRoutes.SecondStepWorkerRegistration.route) {
+            SecondStepWorkerRegistration(
+                onBack = {
+                    navController.popBackStack()
+                },
+                onComplete = {
+                    navController.popBackStack(RegistrationRoutes.RegistrationHub.route, inclusive = true)
+                }
+            )
+        }
+
         composable(route = RegistrationRoutes.ThirdStepFinderRegistration.route) {
             ThirdStepFinderRegistration(
                 onBackClick = {
@@ -70,6 +116,27 @@ fun RegistrationNavHost(
                 },
                 onConfirmClick = {
                     // TODO: Implement registration completion logic
+                    navController.popBackStack(RegistrationRoutes.RegistrationHub.route, inclusive = true)
+                }
+            )
+        }
+        composable(route = RegistrationRoutes.FirstStepWorkerRegistration.route) {
+            FirstStepWorkerRegistration(
+                onBackClick = {
+                    navController.popBackStack()
+                },
+                onNextClick = {
+                    navController.navigate(RegistrationRoutes.SecondStepWorkerRegistration.route)
+                }
+            )
+        }
+
+        composable(route = RegistrationRoutes.SecondStepWorkerRegistration.route) {
+            SecondStepWorkerRegistration(
+                onBack = {
+                    navController.popBackStack()
+                },
+                onComplete = {
                     navController.popBackStack(RegistrationRoutes.RegistrationHub.route, inclusive = true)
                 }
             )

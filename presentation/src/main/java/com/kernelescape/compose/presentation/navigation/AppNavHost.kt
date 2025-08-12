@@ -41,7 +41,7 @@ fun AppNavHost(
                 }
             )
         }
-        
+
         // Дочерний NavHost для регистрации
         composable(AppRoutes.Registration.route) {
             RegistrationNavHost(

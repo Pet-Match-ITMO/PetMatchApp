@@ -40,9 +40,9 @@ import com.kernelescape.compose.resources.ui.theme.RegistrationSecondaryText
 import com.kernelescape.compose.resources.ui.theme.RegistrationWhite
 
 @Composable
-fun RegistrationForFindersScaffold(
+fun RegistrationForWorkersScaffold(
     currentStep: Int,
-    totalSteps: Int = 3,
+    totalSteps: Int = 2,
     stepTitle: String,
     primaryButtonText: String,
     secondaryButtonText: String? = null,
@@ -102,7 +102,6 @@ fun RegistrationForFindersScaffold(
                     val previousTitle = when (currentStep) {
                         1 -> stringResource(R.string.registration)
                         2 -> stringResource(R.string.registration_step1_title)
-                        3 -> stringResource(R.string.registration_step2_title)
                         else -> ""
                     }
                     if (previousTitle.isNotEmpty()) {
