@@ -19,9 +19,18 @@ sealed class RegistrationRoutes(
     /** Третий шаг регистрации для поиска питомца */
     object ThirdStepFinderRegistration : RegistrationRoutes("third_step_finder_registration")
 
+    /** Успех регистрации для поиска питомца */
+    object SuccessRegistrationScreenForFinders : RegistrationRoutes("success_registration_screen_for_finder")
+
     /** Первый шаг регистрации для работника приюта */
     object FirstStepWorkerRegistration : RegistrationRoutes("first_step_worker_registration")
 
     /** Второй шаг регистрации для работника приюта */
     object SecondStepWorkerRegistration : RegistrationRoutes("second_step_worker_registration")
+
+    /** Успех регистрации для работника приюта */
+    object SuccessRegistrationScreenForWorkers : RegistrationRoutes("success_registration_screen_for_worker")
+
+    /** Экран авторизации */
+    object Authorization : RegistrationRoutes("authorization")
 }
