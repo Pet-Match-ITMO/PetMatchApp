@@ -14,7 +14,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.kernelescape.compose.presentation.uiComponents.screens.registration.components.RegistrationForFindersScaffold
 import com.kernelescape.compose.presentation.uiComponents.screens.registration.components.TagSection
 import com.kernelescape.compose.resources.R
 import com.kernelescape.compose.resources.ui.theme.RegistrationAccentOrange
@@ -28,9 +27,6 @@ fun ThirdStepFinderRegistration(
     onBackClick: () -> Unit = {},
     onConfirmClick: () -> Unit = {}
 ) {
-    val textPrimaryColor = RegistrationPrimaryText
-    val textSecondaryColor = RegistrationSecondaryText
-
     // Default values for state
     val defaultActivity = stringResource(R.string.registration_option_any_feminine)
     val defaultCharacter = stringResource(R.string.registration_option_any_masculine)
@@ -161,7 +157,7 @@ fun ThirdStepFinderRegistration(
 
                 // Human compatibility tag group
                 item {
-                    com.kernelescape.compose.presentation.uiComponents.screens.registration.components.TagSection(
+                    TagSection(
                         title = stringResource(R.string.registration_human_compatibility_title),
                         tags = listOf(
                             stringResource(R.string.registration_human_compatibility_all),

@@ -1,4 +1,4 @@
-package com.kernelescape.compose.presentation.uiComponents.screens.registration.components
+package com.kernelescape.compose.presentation.uiComponents.screens.registration.registrationForWorker
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -14,9 +14,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.foundation.layout.wrapContentSize
-import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.Text
@@ -31,18 +28,17 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.kernelescape.compose.presentation.uiComponents.common.PrimaryButton
+import com.kernelescape.compose.presentation.uiComponents.common.ResetButton
 import com.kernelescape.compose.resources.R
-import com.kernelescape.compose.resources.ui.theme.RegistrationAccentLightTeal
-import com.kernelescape.compose.resources.ui.theme.RegistrationAccentTeal
 import com.kernelescape.compose.resources.ui.theme.RegistrationBackgroundLight
 import com.kernelescape.compose.resources.ui.theme.RegistrationPrimaryText
 import com.kernelescape.compose.resources.ui.theme.RegistrationSecondaryText
-import com.kernelescape.compose.resources.ui.theme.RegistrationWhite
 
 @Composable
-fun RegistrationForFindersScaffold(
+fun RegistrationForWorkersScaffold(
     currentStep: Int,
-    totalSteps: Int = 3,
+    totalSteps: Int = 2,
     stepTitle: String,
     primaryButtonText: String,
     secondaryButtonText: String? = null,
@@ -51,12 +47,9 @@ fun RegistrationForFindersScaffold(
     onCloseClick: () -> Unit,
     content: @Composable () -> Unit
 ) {
-    val sfProTextMedium = FontFamily(Font(R.font.sf_pro_text_regular, weight = FontWeight.Medium))
     val backgroundColor = RegistrationBackgroundLight
     val primaryTextColor = RegistrationPrimaryText
     val secondaryTextColor = RegistrationSecondaryText
-    val primaryButtonColor = RegistrationAccentTeal
-    val secondaryButtonColor = RegistrationAccentLightTeal
 
     Box(
         modifier = Modifier
@@ -102,7 +95,6 @@ fun RegistrationForFindersScaffold(
                     val previousTitle = when (currentStep) {
                         1 -> stringResource(R.string.registration)
                         2 -> stringResource(R.string.registration_step1_title)
-                        3 -> stringResource(R.string.registration_step2_title)
                         else -> ""
                     }
                     if (previousTitle.isNotEmpty()) {
@@ -157,40 +149,26 @@ fun RegistrationForFindersScaffold(
                 verticalArrangement = Arrangement.spacedBy(12.dp)
             ) {
                 // Основная кнопка (Далее)
-                Button(
+                PrimaryButton(
+                    text = primaryButtonText,
                     onClick = onPrimaryButtonClick,
                     modifier = Modifier
                         .fillMaxWidth()
-                        .height(56.dp),
-                    shape = RoundedCornerShape(80.dp),
-                    colors = ButtonDefaults.buttonColors(containerColor = primaryButtonColor)
-                ) {
-                    Text(
-                        text = primaryButtonText,
-                        fontSize = 17.sp,
-                        fontFamily = sfProTextMedium,
-                        color = RegistrationWhite
-                    )
-                }
+                        .height(60.dp)
+                        .padding(horizontal = 8.dp)
+                )
 
                 // Вторичная кнопка (если есть)
                 secondaryButtonText?.let { buttonText ->
                     onSecondaryButtonClick?.let { onClick ->
-                        Button(
+                        ResetButton(
+                            text = buttonText,
                             onClick = onClick,
                             modifier = Modifier
                                 .fillMaxWidth()
-                                .height(56.dp),
-                            shape = RoundedCornerShape(80.dp),
-                            colors = ButtonDefaults.buttonColors(containerColor = secondaryButtonColor)
-                        ) {
-                            Text(
-                                text = buttonText,
-                                fontSize = 17.sp,
-                                fontFamily = sfProTextMedium,
-                                color = primaryTextColor
-                            )
-                        }
+                                .height(60.dp)
+                                .padding(horizontal = 8.dp)
+                        )
                     }
                 }
             }

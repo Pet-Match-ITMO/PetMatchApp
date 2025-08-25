@@ -1,4 +1,4 @@
-package com.kernelescape.compose.presentation.uiComponents.screens.registration.components
+package com.kernelescape.compose.presentation.uiComponents.screens.registration.registrationHub
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box

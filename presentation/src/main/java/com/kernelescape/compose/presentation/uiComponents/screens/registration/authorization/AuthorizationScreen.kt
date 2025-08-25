@@ -9,8 +9,6 @@ import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
-import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -58,9 +56,9 @@ fun AuthorizationScreen(
             // Illustration
             Box(
                 modifier =
-                    Modifier
-                        .fillMaxWidth()
-                        .padding(bottom = 24.dp),
+                Modifier
+                    .fillMaxWidth()
+                    .padding(bottom = 24.dp),
                 contentAlignment = Alignment.Center
             ) {
                 Image(
@@ -68,9 +66,9 @@ fun AuthorizationScreen(
                     contentDescription = null,
                     contentScale = ContentScale.Fit,
                     modifier =
-                        Modifier
-                            .fillMaxWidth(0.85f)
-                            .heightIn(max = 280.dp)
+                    Modifier
+                        .fillMaxWidth(0.85f)
+                        .heightIn(max = 280.dp)
                 )
             }
 
@@ -80,10 +78,10 @@ fun AuthorizationScreen(
                 style = MaterialTheme.typography.titleLarge,
                 color = MaterialTheme.colorScheme.onBackground,
                 modifier =
-                    Modifier
-                        .fillMaxWidth()
-                        .padding(horizontal = 16.dp)
-                        .padding(bottom = 16.dp),
+                Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 16.dp)
+                    .padding(bottom = 16.dp),
                 textAlign = TextAlign.Center
             )
 

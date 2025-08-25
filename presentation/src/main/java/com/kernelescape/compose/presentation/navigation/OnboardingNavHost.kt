@@ -3,7 +3,6 @@ package com.kernelescape.compose.presentation.navigation
 import androidx.compose.runtime.Composable
 import com.kernelescape.compose.presentation.uiComponents.screens.onboarding.components.OnboardingPagerScreen
 
-
 /**
  * Упрощенный NavHost для раздела онбординга пользователя.
  * Теперь использует единый OnboardingPagerScreen с HorizontalPager для свайпов

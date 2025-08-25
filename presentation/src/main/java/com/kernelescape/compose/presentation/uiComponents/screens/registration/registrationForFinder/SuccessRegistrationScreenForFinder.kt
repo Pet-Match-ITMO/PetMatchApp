@@ -39,33 +39,32 @@ fun SuccessRegistrationScreenForFinders(
 
     Box(
         modifier =
-            Modifier
-                .fillMaxSize()
-                .background(MaterialTheme.colorScheme.background)
-                .statusBarsPadding()
-                .navigationBarsPadding()
-                .padding(all = 4.dp)
+        Modifier
+            .fillMaxSize()
+            .background(MaterialTheme.colorScheme.background)
+            .statusBarsPadding()
+            .navigationBarsPadding()
+            .padding(all = 4.dp)
     ) {
         // Основная колонка с контентом
         Column(
             modifier =
-                Modifier
-                    .fillMaxSize()
-                    .padding(
-                        horizontal = 20.dp
-                    ),
+            Modifier
+                .fillMaxSize()
+                .padding(
+                    horizontal = 20.dp
+                ),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             // Контент экрана (иллюстрация, заголовок, подзаголовок) - больше места
             Box(
                 modifier =
-                    Modifier
-                        .fillMaxWidth()
-                        .weight(3f)
-                        .padding(top = 24.dp),
+                Modifier
+                    .fillMaxWidth()
+                    .weight(3f)
+                    .padding(top = 24.dp),
                 contentAlignment = Alignment.TopCenter
             ) {
-
                 Column(
                     modifier = Modifier.fillMaxWidth(),
                     horizontalAlignment = Alignment.CenterHorizontally,
@@ -74,9 +73,9 @@ fun SuccessRegistrationScreenForFinders(
                     // Illustration - картинка (адаптивная)
                     Box(
                         modifier =
-                            Modifier
-                                .fillMaxWidth()
-                                .padding(bottom = 24.dp),
+                        Modifier
+                            .fillMaxWidth()
+                            .padding(bottom = 24.dp),
                         contentAlignment = Alignment.Center
                     ) {
                         Image(
@@ -84,9 +83,9 @@ fun SuccessRegistrationScreenForFinders(
                             contentDescription = null,
                             contentScale = ContentScale.Fit,
                             modifier =
-                                Modifier
-                                    .fillMaxWidth(0.85f) // 85% от ширины экрана
-                                    .heightIn(max = 280.dp) // Максимальная высота с возможностью уменьшения
+                            Modifier
+                                .fillMaxWidth(0.85f) // 85% от ширины экрана
+                                .heightIn(max = 280.dp) // Максимальная высота с возможностью уменьшения
                         )
                     }
 
@@ -96,10 +95,10 @@ fun SuccessRegistrationScreenForFinders(
                         style = MaterialTheme.typography.titleLarge,
                         color = MaterialTheme.colorScheme.onBackground,
                         modifier =
-                            Modifier
-                                .fillMaxWidth()
-                                .padding(horizontal = 16.dp)
-                                .padding(bottom = 16.dp),
+                        Modifier
+                            .fillMaxWidth()
+                            .padding(horizontal = 16.dp)
+                            .padding(bottom = 16.dp),
                         textAlign = TextAlign.Center
                     )
 
@@ -110,10 +109,10 @@ fun SuccessRegistrationScreenForFinders(
                         color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.7f),
                         textAlign = TextAlign.Center,
                         modifier =
-                            Modifier
-                                .fillMaxWidth()
-                                .padding(horizontal = 16.dp)
-                                .padding(bottom = 16.dp)
+                        Modifier
+                            .fillMaxWidth()
+                            .padding(horizontal = 16.dp)
+                            .padding(bottom = 16.dp)
                     )
                 }
             }
@@ -122,10 +121,10 @@ fun SuccessRegistrationScreenForFinders(
             Button(
                 onClick = onContinueClick,
                 modifier =
-                    Modifier
-                        .fillMaxWidth()
-                        .height(60.dp)
-                        .padding(horizontal = 8.dp),
+                Modifier
+                    .fillMaxWidth()
+                    .height(60.dp)
+                    .padding(horizontal = 8.dp),
                 shape = RoundedCornerShape(80.dp),
                 colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.primary)
             ) {

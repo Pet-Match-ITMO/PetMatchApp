@@ -26,7 +26,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.kernelescape.compose.presentation.uiComponents.screens.registration.components.CustomSwitch
-import com.kernelescape.compose.presentation.uiComponents.screens.registration.components.RegistrationForWorkersScaffold
 import com.kernelescape.compose.presentation.uiComponents.screens.registration.components.RegistrationTextField
 import com.kernelescape.compose.presentation.uiComponents.screens.registration.components.TagSection
 import com.kernelescape.compose.presentation.uiComponents.screens.registration.components.UploadFileCard

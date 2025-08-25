@@ -12,7 +12,6 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import com.kernelescape.compose.presentation.uiComponents.screens.registration.components.RegistrationForFindersScaffold
 import com.kernelescape.compose.presentation.uiComponents.screens.registration.components.TagSection
 import com.kernelescape.compose.resources.R
 import com.kernelescape.compose.resources.ui.theme.RegistrationAccentOrange

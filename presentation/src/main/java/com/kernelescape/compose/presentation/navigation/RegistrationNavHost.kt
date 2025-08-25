@@ -5,6 +5,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.kernelescape.compose.presentation.navigation.routes.RegistrationRoutes
+import com.kernelescape.compose.presentation.uiComponents.screens.registration.authorization.AuthorizationScreen
 import com.kernelescape.compose.presentation.uiComponents.screens.registration.registrationForFinder.FirstStepFinderRegistration
 import com.kernelescape.compose.presentation.uiComponents.screens.registration.registrationForFinder.SecondStepFinderRegistration
 import com.kernelescape.compose.presentation.uiComponents.screens.registration.registrationForFinder.SuccessRegistrationScreenForFinders
@@ -13,7 +14,6 @@ import com.kernelescape.compose.presentation.uiComponents.screens.registration.r
 import com.kernelescape.compose.presentation.uiComponents.screens.registration.registrationForWorker.SecondStepWorkerRegistration
 import com.kernelescape.compose.presentation.uiComponents.screens.registration.registrationForWorker.SuccessRegistrationScreenForWorkers
 import com.kernelescape.compose.presentation.uiComponents.screens.registration.registrationHub.RegistrationHubScreen
-import com.kernelescape.compose.presentation.uiComponents.screens.registration.authorization.AuthorizationScreen
 
 /**
  * NavHost для управления навигацией в разделе регистрации.
@@ -29,8 +29,7 @@ fun RegistrationNavHost(
         navController = navController,
         startDestination = RegistrationRoutes.RegistrationHub.route
     ) {
-
-        //HUB регистрации
+        // HUB регистрации
         composable(route = RegistrationRoutes.RegistrationHub.route) {
             RegistrationHubScreen(
                 onLookingForPetClick = {
@@ -47,7 +46,7 @@ fun RegistrationNavHost(
                 }
             )
         }
-        //FINDERS
+        // FINDERS
         composable(route = RegistrationRoutes.FirstStepFinderRegistration.route) {
             FirstStepFinderRegistration(
                 onBackClick = {
@@ -89,7 +88,7 @@ fun RegistrationNavHost(
             )
         }
 
-        //WORKERS
+        // WORKERS
         composable(route = RegistrationRoutes.FirstStepWorkerRegistration.route) {
             FirstStepWorkerRegistration(
                 onBackClick = {
@@ -120,7 +119,7 @@ fun RegistrationNavHost(
             )
         }
 
-        //AUTHORIZATION
+        // AUTHORIZATION
         composable(route = RegistrationRoutes.Authorization.route) {
             AuthorizationScreen(
                 onEnterClick = { /* Handle login */ },

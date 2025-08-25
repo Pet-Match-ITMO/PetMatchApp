@@ -11,9 +11,6 @@ import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.outlined.FavoriteBorder
-import androidx.compose.material.icons.outlined.Home
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Icon
@@ -28,7 +25,6 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import com.kernelescape.compose.presentation.uiComponents.screens.registration.components.RegistrationScaffold
 import com.kernelescape.compose.resources.R
 
 /**
@@ -118,7 +114,7 @@ fun RegistrationHubScreen(
                     )
                     Spacer(modifier = Modifier.width(8.dp))
                     Icon(
-                        imageVector = Icons.Outlined.FavoriteBorder,
+                        painter = painterResource(R.drawable.ic_paw),
                         contentDescription = stringResource(id = R.string.pet_icon_content_description),
                         tint = MaterialTheme.colorScheme.onPrimary
                     )
@@ -144,7 +140,7 @@ fun RegistrationHubScreen(
                     )
                     Spacer(modifier = Modifier.width(8.dp))
                     Icon(
-                        imageVector = Icons.Outlined.Home,
+                        painter = painterResource(R.drawable.ic_home),
                         contentDescription = stringResource(id = R.string.shelter_icon_content_description),
                         tint = MaterialTheme.colorScheme.onPrimary
                     )

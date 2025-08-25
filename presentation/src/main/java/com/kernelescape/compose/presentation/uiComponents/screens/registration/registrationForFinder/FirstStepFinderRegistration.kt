@@ -14,7 +14,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.kernelescape.compose.presentation.uiComponents.screens.registration.components.PasswordTextField
-import com.kernelescape.compose.presentation.uiComponents.screens.registration.components.RegistrationForFindersScaffold
 import com.kernelescape.compose.presentation.uiComponents.screens.registration.components.RegistrationTextField
 import com.kernelescape.compose.resources.R
 
