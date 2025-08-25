@@ -1,0 +1,41 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="25dp"
+    android:height="24dp"
+    android:viewportWidth="25"
+    android:viewportHeight="24">
+  <path
+      android:pathData="M5.285,16.75C5.045,19.64 7.225,22 10.125,22H14.915C18.175,22 20.415,19.37 19.875,16.15C19.305,12.77 16.045,10 12.615,10C8.895,10 5.595,13.04 5.285,16.75Z"
+      android:strokeLineJoin="round"
+      android:strokeWidth="1.5"
+      android:fillColor="#00000000"
+      android:strokeColor="#35A2AB"
+      android:strokeLineCap="round"/>
+  <path
+      android:pathData="M11.345,7.5C12.726,7.5 13.845,6.381 13.845,5C13.845,3.619 12.726,2.5 11.345,2.5C9.965,2.5 8.845,3.619 8.845,5C8.845,6.381 9.965,7.5 11.345,7.5Z"
+      android:strokeLineJoin="round"
+      android:strokeWidth="1.5"
+      android:fillColor="#00000000"
+      android:strokeColor="#35A2AB"
+      android:strokeLineCap="round"/>
+  <path
+      android:pathData="M18.175,8.7C19.279,8.7 20.175,7.805 20.175,6.7C20.175,5.595 19.279,4.7 18.175,4.7C17.07,4.7 16.175,5.595 16.175,6.7C16.175,7.805 17.07,8.7 18.175,8.7Z"
+      android:strokeLineJoin="round"
+      android:strokeWidth="1.5"
+      android:fillColor="#00000000"
+      android:strokeColor="#35A2AB"
+      android:strokeLineCap="round"/>
+  <path
+      android:pathData="M21.875,12.7C22.703,12.7 23.375,12.028 23.375,11.2C23.375,10.372 22.703,9.7 21.875,9.7C21.047,9.7 20.375,10.372 20.375,11.2C20.375,12.028 21.047,12.7 21.875,12.7Z"
+      android:strokeLineJoin="round"
+      android:strokeWidth="1.5"
+      android:fillColor="#00000000"
+      android:strokeColor="#35A2AB"
+      android:strokeLineCap="round"/>
+  <path
+      android:pathData="M4.845,10.7C5.95,10.7 6.845,9.805 6.845,8.7C6.845,7.595 5.95,6.7 4.845,6.7C3.741,6.7 2.845,7.595 2.845,8.7C2.845,9.805 3.741,10.7 4.845,10.7Z"
+      android:strokeLineJoin="round"
+      android:strokeWidth="1.5"
+      android:fillColor="#00000000"
+      android:strokeColor="#35A2AB"
+      android:strokeLineCap="round"/>
+</vector>

@@ -69,7 +69,7 @@ fun AnimatedStepIndicator(
                     .width(actualWidth)
                     .height(8.dp)
                     .clip(CircleShape)
-                    .background(color)
+                    .background(color = color)
             )
 
             // Добавляем пробел между индикаторами, кроме последнего
