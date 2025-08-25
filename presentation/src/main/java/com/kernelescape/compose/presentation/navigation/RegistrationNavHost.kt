@@ -76,7 +76,6 @@ fun RegistrationNavHost(
                     navController.popBackStack()
                 },
                 onConfirmClick = {
-                    // TODO: Implement registration completion logic
                     navController.navigate(RegistrationRoutes.SuccessRegistrationScreenForFinders.route)
                 }
             )
